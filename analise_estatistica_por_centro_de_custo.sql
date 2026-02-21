@@ -1,6 +1,7 @@
 -- Sumarização de Dados
 -- Objetivo: Criar uma query mostrando diversas métricas por centro de custo
 -- A query deve mostrar: contagem_lancamentos, total_valores_lançamentos, media_valores_lançamentos, maior_valor, menor_valor, soma_valores_usd, soma_valores_eur, soma_valores_brl, media_taxa_conversao e mediana_valores
+-- A query deve ser ordenada por total_valores_lançamentos em ordem decrescente
 
 SELECT
 	centro_custo,
@@ -16,3 +17,4 @@ SELECT
 From esquema.lancamentosdsacontabeis
 GROUP BY centro_custo
 ORDER BY total_valores_lançamentos DESC;
+
