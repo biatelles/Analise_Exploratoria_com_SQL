@@ -1,11 +1,11 @@
 -- Criando esquema para armazenamento:
 
-CREATE SCHEMA esquema AUTHORIZATION dsa;
+CREATE SCHEMA contabilidade AUTHORIZATION dsa;
 
 
 -- Criação da tabela:
 
-CREATE TABLE esquema.lancamentosdsacontabeis (
+CREATE TABLE  contabilidade.lancamentosdsacontabeis (
     id INT PRIMARY KEY,
     data_lancamento DATE,
     conta_debito VARCHAR(50),
@@ -22,7 +22,7 @@ CREATE TABLE esquema.lancamentosdsacontabeis (
 
 -- Stored Procedure (carga de dados):
 
-CREATE OR REPLACE PROCEDURE esquema.carregar_dados_contabeis()
+CREATE OR REPLACE PROCEDURE  contabilidade.carregar_dados_contabeis()
 LANGUAGE plpgsql
 AS $$
 DECLARE
